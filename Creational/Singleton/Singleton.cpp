@@ -8,10 +8,10 @@ class Singleton
         static Singleton* __instance;
         Singleton() {}
     public:
-        Singleton(Singleton&) = delete;
-        Singleton(Singleton&&) = delete;
-        Singleton& operator=(Singleton&) = delete;
-        Singleton&& operator=(Singleton&&) = delete;
+        Singleton(Singleton&) = delete; //removing copy constructor
+        Singleton(Singleton&&) = delete; //removing move constructor
+        Singleton& operator=(Singleton&) = delete; //removing copy assignment
+        Singleton&& operator=(Singleton&&) = delete; //removing move assignment
 
         static Singleton* GetInstance()
         {
