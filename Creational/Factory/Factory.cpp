@@ -63,12 +63,12 @@ class ConcreteFactory : public Factory
             cout << "Concrete Factory" << endl;
         }
 
-        virtual Product* CreateProductA()
+        virtual Product* CreateProductA() override
         {
             return new ConcreteProductA();
         }
 
-        virtual Product* CreateProductB()
+        virtual Product* CreateProductB() override
         {
             return new ConcreteProductB();
         }
