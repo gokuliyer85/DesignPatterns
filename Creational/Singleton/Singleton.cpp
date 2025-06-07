@@ -33,6 +33,6 @@ Singleton* Singleton::__instance = nullptr;
 
 void main()
 {
-    Singleton *instance = Singleton::GetInstance();
+    std::unique_ptr<Singleton> instance(Singleton::GetInstance());
     instance->CheckInstance();
 }
